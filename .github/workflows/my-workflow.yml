@@ -1,3 +1,5 @@
+name: Do something amazing with dynamic title
+
 run-name: Do something amazing ${{ inputs.custom_title_suffix }} by @${{ github.actor }}
 
 permissions:
