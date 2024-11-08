@@ -1,0 +1,13 @@
+run-name: Do something amazing ${{ inputs.custom_title_suffix }} by @${{ github.actor }}
+
+permissions:
+  id-token: write
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      custom_title_suffix:
+        description: 'Custom title suffix'
+        required: true
+        default: 'placeholder'
