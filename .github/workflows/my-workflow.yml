@@ -13,3 +13,10 @@ on:
         description: 'Custom title suffix'
         required: true
         default: 'placeholder'
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello, World!
+        run: echo "Hello, World!"
