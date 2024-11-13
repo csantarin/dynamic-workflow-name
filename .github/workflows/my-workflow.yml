@@ -1,6 +1,9 @@
 name: Do something amazing with dynamic title
 
-run-name: Do something amazing for ${{ inputs.custom_title_suffix }}
+run-name: >-
+  ${{ contains(inputs.custom_title_suffix, 'ci-systems')
+    && format('Do something amazing for [CI] {0}', inputs.custom_title_suffix)
+    || format('Do something amazing for [No CI] {0}', inputs.custom_title_suffix) }}
 
 permissions:
   id-token: write
